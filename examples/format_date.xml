@@ -1,0 +1,25 @@
+<building>
+
+	<element>
+
+		<floor number=1>
+			<room>C403</room>
+		
+			<type>wall</type>
+			<x1> 1.5</x1>
+			<y1> 1.5 </y1>
+			<x2> 8.5 </x2>
+			<y2> 10 </y2>
+			<isExterior>1</isExterior>
+
+			<type>door</type>
+			<x1> 1.5</x1>
+			<y1> 1.5 </y1>
+			<x2> 8.5 </x2>
+			<y2> 10 </y2>
+			<isExterior>0</isExterior>
+		</floor>
+
+	</element>
+	
+</building>
