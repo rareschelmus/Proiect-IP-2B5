@@ -1,0 +1,38 @@
+LEGENDA CAMPURILOR XML:
+
+- "building" : tagul cel mai general, denota inceputul si finalul descrierii cladirii
+
+- "element" : tagul care desemneaza inceputul si finalul descrierii unui element
+
+- "type" : denota tipul de element descris
+		* valori posibile: "Wall", "Stairs", "Window", "Door"
+
+- "number" : denota numarul etajului de care apartin elementele din tag
+		* valori posibile: [-1, 10]
+
+- "x1" : coordonata pe axa Ox din stanga jos a elementului reprezentat
+		* interval de valori posibile: [0, 100]
+		* coordonata este numar intreg
+
+- "y1" : coordonata pe axa Oy din stanga jos a elementului reprezentat
+		* interval de valori posibile: [0, 100]
+		* coordonata este numar intreg
+
+- "x2" : coordonata pe axa Ox din dreapta sus a elementului reprezentat
+		* interval de valori posibile: [0, 100]
+		* coordonata este numar intreg
+
+- "y1" : coordonata pe axa Oy din dreapta sus a elementului reprezentat
+		* interval de valori posibile: [0, 100]
+		* coordonata este numar intreg
+
+- "floor" : etajul caruia ii apartine elementul declarat
+		* interval valori: [-1, 10]
+		* poate lua valori intregi
+
+
+
+PRECIZARI:
+	- seturile de coordonate (x1, y1) si (x2, y2) sunt date astfel incat sa determine linia elementului privit 2D.
+	
+	- informatiile oferite in acest XML caracterizeaza elementele in format 2D si nimic mai mult; 
