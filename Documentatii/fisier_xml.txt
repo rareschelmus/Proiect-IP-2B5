@@ -30,7 +30,7 @@ LEGENDA CAMPURILOR XML:
 		* interval valori: [-1, 10]
 		* poate lua valori intregi
 
-- "room" : numele camerei de care apartine un perete/geam/usa
+- "room" : numele camerei care apartine etajului din "floor"
 
 PRECIZARI:
 	- seturile de coordonate (x1, y1) si (x2, y2) sunt date astfel incat sa determine linia elementului privit 2D.

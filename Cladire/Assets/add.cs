@@ -6,31 +6,34 @@ using System.Collections.Generic;
 public class add : MonoBehaviour {
 
     private float[] walls;
-    
+    public Transform target;
+    public float smoothTime = 0.3f;
+
+    private Vector3 velocity = Vector3.zero;
+
     //                        [0]     [1]     [2]     [3]     [4]       [5]
     public void createCube(int type, int x1, int y1, int x2, int y2, int r)
     {// 1-wall 2-door 3-window
         GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         cube.transform.position = new Vector3(
                                                 Mathf.Abs(x1 + x2) * 0.5f,  // X
-                                                1 * 1f,                     // Y
+                                                0.05f,                     // Y
                                                 Mathf.Abs(y1 + y2) * 0.5f   // Z
                                              );
 
         if (type == 1)
         {
             cube.GetComponent<Renderer>().material.color = Color.white;
-            //cube.GetComponent<Renderer>().material.color.a = 0.5;
             if (x1 == x2)
                 cube.transform.localScale = new Vector3(
                                                         Mathf.Abs(1) * 0.5f,    // X
-                                                        (4 - type) * 1f,          // Y
+                                                        0.1f,          // Y
                                                         Mathf.Abs(y1 - y2) * 1f // Z
                                                        );
             else if(y1 == y2)
                 cube.transform.localScale = new Vector3(
                                                         Mathf.Abs(1) * 0.5f,     // X
-                                                        (4 - type) * 1f,                // Y
+                                                        0.1f,
                                                         Mathf.Abs(x1 - x2) * 1f + 0.5f  // Z
                                                        );
         }
@@ -39,12 +42,12 @@ public class add : MonoBehaviour {
             cube.GetComponent<Renderer>().material.color = Color.black;
             if(y1 == y2) cube.transform.localScale = new Vector3(
                                                     Mathf.Abs(1) * 0.5f + 0.1f,     // X
-                                                    (4 - type) * 1f,                // Y
+                                                    0.15f,                // Y
                                                     Mathf.Abs(x1 - x2) * 1f  // Z
                                                    );
             else if(x1 == x2) cube.transform.localScale = new Vector3(
                                                     Mathf.Abs(1) * 0.5f + 0.1f, // X
-                                                    (4 - type) * 1f,            // Y
+                                                    0.15f,            // Y
                                                     Mathf.Abs(y1 - y2) * 1f     // Z
                                                    );
         }
@@ -111,6 +114,8 @@ public class add : MonoBehaviour {
 
 
     void Update() {
-
+        Vector3 goalPos = target.position;
+        goalPos.y = transform.position.y;
+        transform.position = Vector3.SmoothDamp(transform.position, goalPos, ref velocity, smoothTime);
     }
 }
