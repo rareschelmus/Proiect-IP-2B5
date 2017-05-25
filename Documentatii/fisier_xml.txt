@@ -5,7 +5,7 @@ LEGENDA CAMPURILOR XML:
 - "element" : tagul care desemneaza inceputul si finalul descrierii unui element
 
 - "type" : denota tipul de element descris
-		* valori posibile: "Wall", "Stairs", "Window", "Door"
+		* valori posibile: "wall", "stairs", "window", "door"
 
 - "number" : denota numarul etajului de care apartin elementele din tag
 		* valori posibile: [-1, 10]
@@ -30,7 +30,7 @@ LEGENDA CAMPURILOR XML:
 		* interval valori: [-1, 10]
 		* poate lua valori intregi
 
-
+- "room" : numele camerei de care apartine un perete/geam/usa
 
 PRECIZARI:
 	- seturile de coordonate (x1, y1) si (x2, y2) sunt date astfel incat sa determine linia elementului privit 2D.

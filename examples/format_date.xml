@@ -1,7 +1,5 @@
 <building>
-
 	<element>
-
 		<floor number=1>
 			<room>C403</room>
 		
@@ -19,7 +17,5 @@
 			<y2> 10 </y2>
 			<isExterior>0</isExterior>
 		</floor>
-
 	</element>
-	
 </building>
