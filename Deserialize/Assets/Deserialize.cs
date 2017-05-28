@@ -67,13 +67,14 @@ public class Deserialize : MonoBehaviour // the Class
                                         string y2_str = dimension.InnerText;
                                         y2 = float.Parse(y2_str);
                                     }
-                                    LineRenderer lineRenderer;
-                                    GameObject obj = new GameObject("line");
-                                    lineRenderer = obj.AddComponent<LineRenderer>();
-
-                                    lineRenderer.SetPosition(0, new Vector3(x1, 0, y1));
-                                    lineRenderer.SetPosition(1, new Vector3(x2, 0, y2));
+                                   
                                 }
+                                LineRenderer lineRenderer;
+                                GameObject obj = new GameObject("line");
+                                lineRenderer = obj.AddComponent<LineRenderer>();
+
+                                lineRenderer.SetPosition(0, new Vector3(x1, 0, y1));
+                                lineRenderer.SetPosition(1, new Vector3(x2, 0, y2));
                                 break;
 
                             case "door":
@@ -101,14 +102,14 @@ public class Deserialize : MonoBehaviour // the Class
                                         string y2_str = dimension.InnerText;
                                         y2 = float.Parse(y2_str);
                                     }
-                                    LineRenderer lineRenderer;
-                                    GameObject obj = new GameObject("line");
-                                    lineRenderer = obj.AddComponent<LineRenderer>();
-
-                                    lineRenderer.SetPosition(0, new Vector3(x1, 0, y1));
-                                    lineRenderer.SetPosition(1, new Vector3(x2, 0, y2));
                                 }
-                                
+
+                                LineRenderer lineRenderer2;
+                                GameObject obj2 = new GameObject("line_usa");
+                                lineRenderer2 = obj2.AddComponent<LineRenderer>();
+
+                                lineRenderer2.SetPosition(0, new Vector3(x1, 0, y1));
+                                lineRenderer2.SetPosition(1, new Vector3(x2, 0, y2));
                                 break;
                         }
                     }
