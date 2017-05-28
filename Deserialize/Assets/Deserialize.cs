@@ -112,8 +112,8 @@ public class Deserialize : MonoBehaviour // the Class
                                 lineRenderer2 = obj2.AddComponent<LineRenderer>();
                                 lineRenderer2.SetWidth(0.5f, 0.5f);
                                 lineRenderer2.SetColors(Color.black, Color.black);
-                                lineRenderer2.SetPosition(0, new Vector3(x1, 0.1f, y1));
-                                lineRenderer2.SetPosition(1, new Vector3(x2, 0.1f, y2));
+                                lineRenderer2.SetPosition(0, new Vector3(x1, 0.35f, y1));
+                                lineRenderer2.SetPosition(1, new Vector3(x2, 0.35f, y2));
                                 Material blackDiffuseMat = new Material(Shader.Find("Sprites/Default"));
                                 lineRenderer2.material = blackDiffuseMat;
                                 break;
