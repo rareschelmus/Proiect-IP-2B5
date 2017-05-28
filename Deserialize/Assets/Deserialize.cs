@@ -76,7 +76,7 @@ public class Deserialize : MonoBehaviour // the Class
                                 lineRenderer.SetColors(Color.white, Color.white);
                                 lineRenderer.SetPosition(0, new Vector3(x1, 0, y1));
                                 lineRenderer.SetPosition(1, new Vector3(x2, 0, y2));
-                                Material whiteDiffuseMat = new Material(Shader.Find("Unlit/Texture"));
+                                Material whiteDiffuseMat = new Material(Shader.Find("Sprites/Default"));
                                 lineRenderer.material = whiteDiffuseMat;
                                 break;
 
