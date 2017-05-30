@@ -506,7 +506,7 @@
 	
 	<floor number="2">
 		<room>
-			<name>Stairs2</name>
+			<name>Stairs1</name>
 			<type name="stairs">
 				<x1> 0 </x1>
 				<y1> 15 </y1>
